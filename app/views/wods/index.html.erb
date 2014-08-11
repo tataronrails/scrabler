@@ -1,0 +1,11 @@
+<h1>With buttons below you can parse WODs and export to XLS</h1>
+
+<%= form_tag('/wods/create_xls') do -%>
+  <input type="submit" value="Import to XLS from uri" />
+  <span style="color:red"> http://www.crossfitverve.com/tuesday-140722</span>
+<% end -%> </br>
+
+<%= form_tag('/wods/create_xls') do -%>
+  <input type="submit" value="Import to XLS from uri" />
+  <input type="text" name="uri_path" size="100" placeholder="Full path uri(only for host- outlawcrossfit.com) ">
+<% end -%>
