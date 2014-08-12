@@ -8,6 +8,7 @@ gem 'rails', '4.0.2'
 
 gem 'nokogiri'
 gem 'spreadsheet'
+gem 'haml-rails'
 
 gem 'sass-rails', '~> 4.0.0'
 
