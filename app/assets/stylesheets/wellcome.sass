@@ -1,0 +1,62 @@
+.wellcome
+  +container(100%)
+  @mixin container-border()
+    border: 1px #CCC solid
+  @mixin link-button()
+    color: #4981d7
+    &:hover
+      color: red
+  header
+    +span-columns(12)
+    +container-border()
+    h1
+      text-align: center
+    p
+      padding-left: 15px
+      a
+        +link-button()
+        font-weight: bold
+
+  .intering-text
+    +span-columns(12)
+    padding-left: 15px
+    width: 80%
+    h2
+      text-decoration: underline
+    p
+      padding-left: 10px
+    p.code-container
+      +container-border()
+      width: 50%
+      margin-left: 20%
+      .text-tag
+        color: red
+    .text-question
+      font-style: italic
+    .text-indention
+      padding-left: 40px
+
+  .parse-content
+    +span-columns(12)
+    .title
+      +span-columns(12)
+      margin-bottom: 10px
+      a
+        +link-button()
+      input
+        width: 50%
+        margin-left: 10px
+        margin-right: 10px
+    .initial-panel
+      +span-columns(6, 12)
+      .initial
+        +container-border()
+        height: 500px
+        margin-bottom: 10px
+        padding: 5px
+    .result-panel
+      +span-columns(6 omega, 12)
+      .result
+        +container-border()
+        height: 500px
+        padding: 5px

@@ -1,29 +1,39 @@
-%head
-  %h1 Wellcome to simple static html page parser application
-  %p
-    If you want to check parse and export WOD(Workout of Day)data to EXCEL
-    =link_to "click here", wods_index_path()
-%section.intering-text
-  %h2 Parsing of HTML page
-  %p
-    %b First of all, what is parsing of static html page? Why wee need parsing the page?
-  %p
-    So page parsing - is the proccess that allows you get sertain information you need in sequence ordered from HTML page.
-    Informations on the page sets in blocks. Blocks html code which holds data(information). For example:
-    %span
-      = "<div class='text'> This is outer block <div>This is inner block</div> </div>"
+.wellcome
+  %header
+    %h1 Wellcome to simple static html page parser application
     %p
-      = "So if you want to get information like 'This is outer block', then you tell to pragramm that it must get text inside"
-      = "the 'div' tag with 'text' class"
-      %span
-        = "<div class='text'>This is outer block <div>"
-%section.parse-content
-  %p
-    = link_to "Get information from url"
-    = text_field_tag "url"
-    = link_to "Get data"
-  .pages{style: "border: 1px solid black; padding: 5px"}
-    .initial
-      Content for hold initial data
-    .result
-      Content for hold result data
+      If you want to check parse and export WOD(Workout of Day)data to EXCEL
+      =link_to "click here", wods_index_path()
+  %section.intering-text
+    %h2 Parsing of HTML page
+    %p.text-question First of all, what is parsing of static html page? Why wee need parsing the page?
+    %p
+      %span.text-indention
+      So page parsing - is the proccess that allows you get sertain information you need in sequence ordered from HTML page.
+      Informations on the page sets in blocks. Blocks html code which holds data(information). For example:
+      %p.code-container
+        %span.text-tag= "<div class='text'>"
+        %span This is outer block
+        %span.text-tag= "<div>"
+        %span This is inner block
+        %span.text-tag= "</div> </div>"
+      %p
+        %span.text-indention
+        = "So if you want to get information like 'This is outer block', then you tell to pragramm that it must get text inside"
+        = "the 'div' tag with 'text' class"
+        %p.code-container
+          %span.text-tag= "<div class='text'>"
+          %span This is outer block
+          %span.text-tag= "<div>"
+          %span.text-tag= "</div>"
+  %section.parse-content
+    .title
+      = link_to "Get information from url"
+      = text_field_tag "url", nil, placeholder: "Type url of resource for getting parse"
+      = link_to "Get data"
+    .initial-panel
+      .initial
+        Content for hold initial data
+    .result-panel
+      .result
+        Content for hold result data
