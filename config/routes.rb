@@ -5,6 +5,7 @@ Scrabler::Application.routes.draw do
   root 'wellcome#index'
   get  'wods/index' => 'wods#index'
   post 'wods/create_xls' => 'wods#create_xls'
+  post 'wellcome/get_source' => 'wellcome#get_source'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

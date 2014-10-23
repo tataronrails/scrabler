@@ -28,7 +28,7 @@
           %span.text-tag= "</div>"
   %section.parse-content
     .title
-      = link_to "Get information from url"
+      = link_to "Get information from url", nil, class: 'get_info'
       = text_field_tag "url", nil, placeholder: "Type url of resource for getting parse"
       = link_to "Get data"
     .initial-panel
