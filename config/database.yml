@@ -27,5 +27,14 @@ production:
   reconnect: false
   database: scrabler_production
   username: postgres
-  password: 11111
+  password: postgres
+  socket: /var/run/postgresql/.s.PGSQL.5432
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: scrabler_test
+  username: postgres
+  password: postgres
   socket: /var/run/postgresql/.s.PGSQL.5432
